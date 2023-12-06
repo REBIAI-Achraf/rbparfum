@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>RB</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -127,6 +127,7 @@
            }
 /********************** Banner *****************************/ 
 .banner{
+    overflow: hidden;
     margin-top: 50px;
     position: relative;
     display: flex;
@@ -156,22 +157,13 @@
   background-image: url(img/m.jpg);
   background-position:center;
   background-size: cover;
-  animation: bannerimage1 4s ease-in-out infinite;
+ 
 }
 .banner-box1 h3,.banner-box1 img{
     display: none;
 }
 
-@keyframes bannerimage1 {
-  0% { 
-   
-    background-image: url(img/m.jpg);
-  }
-  100%{
-     
-      background-image:url(img/m2.jpg);
-  }
-}
+
 
 .banner-box2{
     position: relative;
@@ -180,20 +172,10 @@
     background-image: url(img/g.jpg);
     background-position:center;
     background-size: cover;
-    animation: bannerimage2 4s ease-in-out infinite;
+    
 }
 
 
-@keyframes bannerimage2 {
-  0% { 
-   
-    background-image: url(img/g.jpg);
-  }
-  100%{
-     
-      background-image:url(img/g2.jpg);
-  }
-}
 /*--------------------------------------------------------*/
 
 .part0{
@@ -252,25 +234,13 @@ overflow: hidden;
         width:30%;
         height:320px;
         box-shadow: 0 5 15px rgba(0, 0, 0, 0.06);
+        background-image: url(img/43.jpg);
         background-size:cover;
         background-position: center center;
         animation: image 3s ease-in-out infinite;
     }
     
-    @keyframes image {
-      0% { 
-          background-color: #f0f0f0;
-        background-image: url(img/43.jpg);
-      }
-      50% {
-          background-color: #f0f0f0;
-        background-image: url(chanel.webp);
-      }
-      100%{
-          background-color: #f0f0f0;
-          background-image: url(img/42.jpg);
-      }
-    }
+  
     .hero-3{
         display: flex;
         flex-direction:column;
@@ -365,17 +335,10 @@ overflow: hidden;
         box-shadow: 0 5 15px rgba(0, 0, 0, 0.06);
         background-size:cover;
         background-position: center center;
-        animation: image2 2.5s ease-in-out infinite;
+        background-image: url(img/58.jpg);
     }
     
-    @keyframes image2 {
-      0% {  background-image: url(img/58.jpg);
-      }
  
-      100%{
-          background-image: url(img/59.jpg);
-      }
-    }
 
     .hero-10{
         display: flex;
@@ -553,10 +516,7 @@ outline: none;
      
       background-image: url(img/m.jpg);
     }
-    35%{
-       
-        background-image:url(img/m2.jpg);
-    }
+  
     50% { 
      
       background-image: url(img/g.jpg);
@@ -616,7 +576,7 @@ align-items: center;
 }
 iframe {
     width: 100% !important;
-    height: 70vh;
+    height: 75vh;
     border: none;
 }
 
@@ -685,17 +645,17 @@ iframe {
 
 <div class="banner">
 
-<div class="logo-box">
+<div class="logo-box" data-aos="fade-right" data-aos-duration="2000">
     <a href="" class="logo">RB <br>perfumes</a>
 </div>
 
-<div class="banner-box1">
+<div class="banner-box1"data-aos="fade-up" data-aos-duration="2000">
 <h3>
     Capturer l'essence de l'élégance, un parfum pour chaque moment
 </h3>
 <img src="img/icon1.png" alt="" srcset="" height="70px">
 </div>
-<div class="banner-box2">
+<div class="banner-box2"data-aos="fade-left" data-aos-duration="2200">
 </div>
 
 </div>
