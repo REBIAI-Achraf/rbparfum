@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+      <script>
+    $(document).ready(function(){
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+            window.location.hash = hash;
+          });
+        } 
+      });
+    });
+    </script>
+
+</head>
+<body>
+    <section class="header">
+        <div  data-aos="fade-down" data-aos-duration="2200">
+            <ul class="navbar">
+                <li><a href="#banner1" class="active">Home</a></li>
+                <li><a href="#banner2">Blog</a></li>
+                <li><a href="#produit">Shop</a></li>
+                <li><a href="#blog">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href=""><lord-icon
+    src="https://cdn.lordicon.com/slkvcfos.json"
+    trigger="hover"
+    colors="primary:#242424,secondary:#242424"
+    style="width:40px;height:30px"></lord-icon></a></li>
+            </ul>
+        </div>
+    </section>
+<section class="banner1" id="banner1">
+    <div style="display:flex;justify-content:center;align-items:center;height:100%;flex-wrap:wrap;position:relative;width:100%;
+    padding:40px">
+      <div class="kb" data-aos="fade-right" data-aos-duration="2000">
+    <a href="" class="logo">KB parfum</a>
+      </div>
+<div class="kb2">
+<img src="m.jpg" alt="" srcset="" height="100%"data-aos="fade-left"data-aos-duration="2000" width="50%"><img data-aos="fade-left"data-aos-duration="2000"src="g.jpg" alt="" srcset="" height="100%" width="50%">
+</div>
+
+</div>
+</section>
+
+    <section class="banner2" id="banner2"> 
+         <div  class="hero">
+        <div class="hero-1"  data-aos="fade-right" data-aos-duration="2000">
+            <h1>Choose your fragance</h1>
+        </div>
+
+        <div class="hero-2"  data-aos="fade-down"data-aos-duration="2000">
+        </div>
+
+        <div class="hero-3" data-aos="fade-left"data-aos-duration="2000">
+            <p>choisir depuis une centaine de fragance originale</p>
+            <button> voir plus</button>
+        </div>
+        <div class="hero-4" data-aos="fade-right"data-aos-duration="2000">
+            <p>Fragance pour homme</p>
+            <img src="vh.jpg" alt="" srcset="" height="100px">
+            <button> voir plus</button>
+        </div>
+        <div class="hero-5"  data-aos="fade-left"data-aos-duration="2000"></div>
+        <div class="hero-6" data-aos="fade-right"data-aos-duration="2000"></div>
+        <div class="hero-7" data-aos="fade-left"data-aos-duration="2000"> 
+            <p>Fragance pour femme</p>
+            <img src="vf.png" alt="" srcset="" height="100px">
+            <button> voir plus</button>
+        </div>
+        <div class="hero-8" data-aos="fade-right"data-aos-duration="2000">
+            <p>choisir depuis une centaine de fragance originale</p>
+            <button> voir plus</button>
+        </div>
+        <div class="hero-9" data-aos="fade-up"data-aos-duration="2000"></div>
+        <div class="hero-10"  data-aos="fade-left"data-aos-duration="2000"><h1>Choose your fragance</h1></div>
+         </div>
+    </section>
+  
+<section class="produit" id="produit">
+  <h2>Notre sélection pour homme</h2>
+
+
+     <div class="carousel" data-aos="fade-up"data-aos-duration="2000">
+  <a href="" class="carousel-item"><img src="48-r.png"></a>
+      <a href="" class="carousel-item"><img src="49.png" ></a>
+      <a href="" class="carousel-item"><img src="52r.png"></a>
+      <a href="" class="carousel-item"><img src="53r.png"></a>
+      <a href="" class="carousel-item"><img src="50r.png"></a>
+      <a href="" class="carousel-item"><img src="51.png"></a>  
+     </div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+
+
+   <script type="text/javascript">
+      $(document).ready(function(){
+        $('.carousel').carousel({
+          indicators:true
+        });
+      });
+    </script>
+
+
+
+    </section>
+  </iframe>
+    <section id="blog"style="height:60vh;background-size:cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-image: url(45.jpg);
+    "></section>
+    <section id="about"style="height:50vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background-color:#003d83;color: #ffff;
+    align-items: center;
+    text-align: center;">
+    <h2 style="margin-top:-40px;color:#ffff">Kb parfums</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quod necessitatibus perspiciatis? Veniam exercitationem esse quisquam, officia consequatur debitis soluta provident labore consectetur praesentium vel alias sint, illo ratione! Quae!
+Sit officiis voluptatem, veniam quaerat reiciendis corrupti alias maxime tempora molestiae. Nesciunt aspernatur iste dolorum corporis aliquid? Dignissimos voluptates voluptatibus odio iusto esse quaerat id quam quis, eveniet qui aliquid.</p>
+  </section>
+
+
+<div id="contact" style="position:relative;display:flex; flex-direction:column; align-items:center;
+justify-content:center;background-color: #003d83;width:100%;margin-bottom:40px;padding-top:100px;
+text-align: center;height:20vh;color:#fff">
+  <h2 style="color:#fff!important;">Contact</h2>        
+</div>
+
+      <section style="display:flex;   margin-top:-100px;      
+      justify-content:center; background-color: #003d83;
+      color:#fff  !important;width:100%;
+      text-align: center;height:100vh;padding:100px">
+  
+<form action="" method="post">
+  <input type="text" placeholder="Nom">
+  <input type="email" placeholder="Mail">
+<textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+<br><br><br>
+<button>Envoyer</button>
+</form><img src="contact1.jpg" alt="" srcset="" height="100%" width="50%">
+<style>
+  form {width: 60%;
+    text-align: center;
+   height: 100%;;
+   padding:40px;
+ background-color: #fff;
+ color: #003d83;
+
+}
+
+    form input{ 
+      width: 100%;
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+      outline: none;
+      padding: 10px 0;
+      font-size: 20px;
+      font-weight: 300;
+      margin-bottom: 30px;
+      color: #003d83;
+    }
+form input[type="text"],input[type="email"]{
+  border-bottom:  2px solid #003d83 !important;
+
+}
+    form  textarea{
+      width: 100%;
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+      outline: none;
+      padding: 10px 0;
+      font-size: 18px;
+      font-weight: 300;
+      min-height: 150px;
+      color: #003d83;
+      border-bottom:  2px solid #003d83;
+
+    }
+    form textarea::placeholder, form  input::placeholder{color: #757575;}
+
+</style>
+</form>
+
+
+
+
+
+
+
+
+
+</section>
+</body>
+</html>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+    

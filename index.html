@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+    
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+    
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
+    <style>
+           
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+
+         background-color: #fff;
+          font-family: 'Lora', serif;
+
+        }
+    .header {
+    
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        height: 90vh;
+        width: 100%;
+    }
+
+ /******************** NAV NAV NAV *************************************/   
+ 
+ .nav-link {
+        margin: 10px;
+        position: relative;
+        text-decoration: none;
+        font-size:18px;
+        color: #1a1a1a;
+        transition:0.3s ease;
+    }
+    .navbar-brand{
+        display: none;
+        color: #003d83;
+        font-family: 'Great Vibes', cursive;
+    }
+   .nav-link:hover{
+        color: #003d83;
+    }
+     .active{
+        color: #003d83!important;
+    }
+    .navbar-nav a.active::after{
+        content:"";
+        width:80%;
+        height:2px;
+        background:  #003d83;
+        position:absolute;
+        bottom:20px;
+        left:7px;
+        transition: .4s ease-in-out;
+    }
+    .navbar-nav a::after{
+        content:"";
+        width:0%;
+        height:2px;
+        background:  #003d83;
+        position:absolute;
+        bottom:20px;
+        left:7px;
+        transition: .4s ease-in-out;
+    }
+    .navbar-nav a:hover::after{
+        content:"";
+        width:80%;
+        height:2px;
+        background:  #003d83;
+        position:absolute;
+        bottom:20px;
+        left:7px;
+        transition: .4s ease-in-out;
+    }
+
+    .carousel{
+        height:100vh;
+                
+                }
+           .carousel-item img{
+            transition: .4s;
+            width: 400px;
+            scale: 1;}
+           .carousel-item:hover img{
+            scale: 1.1;          
+           transition: .4s;
+           }
+/********************** Banner *****************************/ 
+.banner{
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 95%;
+}
+.logo-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background:linear-gradient(to bottom right, #158fb4, #003d83) ;
+    height: 100%;
+    width: 50%;
+}
+.logo{
+    font-family: 'Great Vibes', cursive;
+    font-size:83px;
+    color:  #ffff;
+    text-decoration: none;
+}
+.banner-box1{
+    position: relative;
+    height: 100%;
+    width: 25%;
+  background-image: url(img/m.jpg);
+  background-position:center;
+  background-size: cover;
+  animation: bannerimage1 4s ease-in-out infinite;
+}
+.banner-box1 h3,.banner-box1 img{
+    display: none;
+}
+
+@keyframes bannerimage1 {
+  0% { 
+   
+    background-image: url(img/m.jpg);
+  }
+  100%{
+     
+      background-image:url(img/m2.jpg);
+  }
+}
+
+.banner-box2{
+    position: relative;
+    height: 100%;
+    width: 25%;
+    background-image: url(img/g.jpg);
+    background-position:center;
+    background-size: cover;
+    animation: bannerimage2 4s ease-in-out infinite;
+}
+
+
+@keyframes bannerimage2 {
+  0% { 
+   
+    background-image: url(img/g.jpg);
+  }
+  100%{
+     
+      background-image:url(img/g2.jpg);
+  }
+}
+/*--------------------------------------------------------*/
+
+.part0{
+    background:linear-gradient(to bottom right, #158fb4, #003d83) ;
+    position: relative;
+    display: flex;
+flex-direction: column;
+    width: 100%;
+}
+.title{
+    color: #ffff;
+}
+.title2{
+    color: #003d83;
+
+}
+.heading{
+    text-align: center;
+    margin: 30px;
+}
+.heading img {
+    margin: 30px;
+    height: 150px;
+}
+.hero{
+    width:100%;
+   display:flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+.hero p{
+    color: #003d83;
+}
+  
+.hero-1{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    width:30%;
+    height:320px;
+    padding: 100px;
+    background:linear-gradient(to bottom right, #158fb4, #003d83) ;
+    transition: .4s ease-in-out;
+}
+.hero h1{
+    font-size: 30px;
+    color: #fff;
+        transition: .4s ease-in-out;
+    }
+    .hero-2{
+        margin-top:20px;
+        width:30%;
+        height:320px;
+        box-shadow: 0 5 15px rgba(0, 0, 0, 0.06);
+        background-size:cover;
+        background-position: center center;
+        animation: image 3s ease-in-out infinite;
+    }
+    
+    @keyframes image {
+      0% { 
+          background-color: #f0f0f0;
+        background-image: url(img/43.jpg);
+      }
+      50% {
+          background-color: #f0f0f0;
+        background-image: url(chanel.webp);
+      }
+      100%{
+          background-color: #f0f0f0;
+          background-image: url(img/42.jpg);
+      }
+    }
+    .hero-3{
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+        width:30%;
+        height:320px;
+        background-color: #fff;     
+        padding:20px;       
+    }
+    .btn{
+        margin: 20px;
+        height: 40px;
+        width: 170px;
+        font-size: 17px;
+        border: none;
+        color: #ffff;
+        background:linear-gradient(to bottom right, #158fb4, #003d83) ;
+
+        transition: .7s;
+        
+    }
+  .btn:hover{
+        background:#158fb4;
+        color: #ffff;
+        transition: .7s;
+    }
+    .hero-4{
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        width:30%;
+        height:320px;
+        background-color: #fff;     
+    }
+    .hero-5{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        width:60%;
+        height:320px;
+        padding: 100px;
+        background-size:cover;
+        background-position: center center;
+        background-image: url(img/14.jpg);
+
+    }
+    .hero-6{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        width:60%;
+        height:320px;
+        padding: 100px;
+        background-size:cover;
+        background-position: center center;
+        background-image: url(img/24.jpg);
+
+    }
+    .hero-7{
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        width:30%;
+        height:320px;
+        background-color: #fff;     
+    }
+    .hero-8{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        width:30%;
+        height:320px;
+        box-shadow: 0 5 15px rgba(0, 0, 0, 0.06);
+        background-size:cover;
+        background-color: #fff;
+    }    
+    
+      .hero-9{
+        width:30%;
+        height:320px;
+        box-shadow: 0 5 15px rgba(0, 0, 0, 0.06);
+        background-size:cover;
+        background-position: center center;
+        animation: image2 2.5s ease-in-out infinite;
+    }
+    
+    @keyframes image2 {
+      0% {  background-image: url(img/58.jpg);
+      }
+ 
+      100%{
+          background-image: url(img/59.jpg);
+      }
+    }
+
+    .hero-10{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        padding: 100px;
+        width:30%;
+        height:320px;
+        box-shadow: 0 5 15px rgba(0, 0, 0, 0.06);
+        background-size:cover;
+        background:linear-gradient(to bottom right, #158fb4, #003d83) ;
+    }  
+
+
+.part1{
+
+    z-index: 10000;
+    background-color: #fff;  
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
+}
+
+iframe {
+    background:#fff ;
+    margin-top: -100px;
+    width: 100% !important;
+    height: 80vh;
+    border: none;
+}
+.title2 img{
+    height: 80px;
+}
+.bg{
+    height:60vh;background-size:100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-image: url(img/45.jpg);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+}
+ .bg::after, .bg2::after{
+    position:absolute;
+    left: 0;
+    content: "";
+    background:linear-gradient(to bottom right, #158fb46b, #003d8386) ;
+    height:60vh;
+    width: 100%;
+}
+.bg h3,.bg2 h3{
+    z-index: 1000!important;color: #fff;
+}
+.bg2{
+    height:60vh;background-size:100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-image: url(img/29.jpg);
+    display: flex;
+    justify-content: center!important;
+    align-items:center!important;
+    text-align: center!important;
+}
+.part2{
+    background-color: #fff;  
+    color: #003d83;
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
+}
+.part3{
+
+    height: 100vh;
+    width: 100%;position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact{
+margin-top: 50px;
+height: 60%;
+width: 80%;
+display: flex;justify-content:center;align-items: center;flex-direction:row
+}
+form {
+position: relative;
+padding: 10px;
+background:linear-gradient(to bottom right, #158fb4, #003d83) ;
+}
+form , .contact img{
+height:100% ;
+width: 50%;
+}
+input{
+
+border: none;
+border-bottom: 1px solid #ffffff73;
+outline: none;
+background:transparent;
+color:#ffff;
+width:70%;
+padding: 5px;;margin:5px;
+}
+textarea {
+color:#ffff;
+width:70%;
+padding: 5px;
+margin:5px;
+background: transparent;
+width:70%;
+border: none;
+border-bottom: 1px solid #ffffff73;
+outline: none;
+}
+/* small screen  *********************************************************88
+***************************************************************************************
+*****************************************************************************************88***8*/
+@media only screen and (max-width: 600px){
+
+.navbar-brand{
+    display: block;
+}
+.navbar-toggler {
+    border: none;
+    color:transparent;
+}
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 70vh;
+    width: 100%;
+}
+.banner{
+    margin-top:10px;
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    height: 100%!important;
+    width: 100%;
+}
+.logo-box{
+    display: none;
+
+}
+
+.banner-box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width: 100%;
+    animation: bannerimagemobile 4s ease-in-out infinite;
+}
+@keyframes bannerimagemobile{
+    0% { 
+     
+      background-image: url(img/m.jpg);
+    }
+    35%{
+       
+        background-image:url(img/m2.jpg);
+    }
+    50% { 
+     
+      background-image: url(img/g.jpg);
+    }
+    100%{
+       
+        background-image:url(img/g2.jpg);
+    }
+  }
+
+.banner-box1::after{
+    position:absolute;
+    content: "";
+    background:linear-gradient(to bottom right, #158fb46b, #003d8386) ;
+    height:100%;
+    width: 100%;
+}
+.banner-box1 h3{
+    display: inline-block ;
+    background-size: cover;
+    font-size: 30px;
+    margin: 20px;
+    color:#fff;
+    font-family: 'Great Vibes', cursive;
+    z-index: 100;
+    
+}
+.banner-box1 img{
+    display: block;
+    z-index: 1000;
+}
+
+.banner-box2{
+    display: none;
+}
+.heading{
+    display: none;
+}
+.hero{
+    width:100%;
+   display:flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.hero-1,.hero-2,.hero-3,.hero-4,.hero-5,.hero-6,.hero-7,.hero-8,.hero-9,.hero-10{
+    margin: 0;
+    width:100%;
+}
+
+.hero-3,.hero-5,.hero-6,.hero-8,.hero-10{
+    display: none;
+}
+.title,.title2{
+    font-size:18px;padding:10px;
+}
+iframe {
+    width: 100% !important;
+    height: 70vh;
+    border: none;
+}
+
+.title2 img{
+    height: 50px;
+}
+.bg,.bg2{
+    background-size: cover;
+    height:40vh;
+}
+.bg::after,.bg2::after{
+    height:40vh;
+}
+.part2{
+    height:85vh;
+    padding:15px;
+}
+.part2 p {
+    font-size:15px;
+}
+.part3{
+    height: 140vh !important;;
+}
+.contact{
+    text-align: center;
+    height: 90% !important;
+    width: 100% !important;
+    flex-direction:column!important;
+}
+.contact form{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    height:50%!important;
+    width:100%!important;
+}
+.contact img{
+    height:50%!important;
+    width: 100%!important;
+}
+}
+ </style>
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg  ">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="#" >RB perfumes</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav mx-auto ">
+              <a class="nav-link active"  href="#">Home</a>
+              <a class="nav-link" href="#">Blog</a>
+              <a class="nav-link" href="#">Shop</a>
+              <a class="nav-link "href="#about" >About </a>
+              <a class="nav-link "href="#contact" >Contact </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section class="header"> 
+
+     
+
+<div class="banner">
+
+<div class="logo-box">
+    <a href="" class="logo">RB <br>perfumes</a>
+</div>
+
+<div class="banner-box1">
+<h3>
+    Capturer l'essence de l'élégance, un parfum pour chaque moment
+</h3>
+<img src="img/icon1.png" alt="" srcset="" height="70px">
+</div>
+<div class="banner-box2">
+</div>
+
+</div>
+
+  </section>
+
+  <section class="part0">
+
+<div class="heading">
+    <h3 class="title">Meilleure fragace</h3>
+    <img src="img/icon1.png" alt="">
+
+</div>
+<div class="hero">
+
+    <div class="hero-1"  data-aos="fade-right" data-aos-duration="2000">
+        <h1>Choose your fragance</h1>
+    </div>
+    <div class="hero-2"  data-aos="fade-up" data-aos-duration="2000">
+       
+    </div>
+    <div class="hero-3" data-aos="fade-left"data-aos-duration="2000">
+        <p>choisir depuis une centaine de fragance originale</p>
+        <a href="#" class="btn"> voir plus</a>
+    </div>
+
+    <div class="hero-4" data-aos="fade-right"data-aos-duration="2000">
+        <p>Fragance pour homme</p>
+        <img src="img/vh.jpg" alt="" srcset="" height="100px">
+        <a href=""class="btn"> voir plus</a>
+    </div>
+    <div class="hero-5"  data-aos="fade-left"data-aos-duration="2000"></div>
+    
+    <div class="hero-6" data-aos="fade-right"data-aos-duration="2000"></div>
+    <div class="hero-7" data-aos="fade-left"data-aos-duration="2000"> 
+        <p>Fragance pour femme</p>
+        <img src="img/vf.png" alt="" srcset="" height="100px">
+        <a href="" class="btn"> voir plus</a>
+    </div>
+    <div class="hero-8" data-aos="fade-right"data-aos-duration="2000">
+        <p>choisir depuis une centaine de fragance originale</p>
+        <a href="" class="btn"> voir plus</a>
+    </div>
+    <div class="hero-9" data-aos="fade-up"data-aos-duration="2000"></div>
+    <div class="hero-10"  data-aos="fade-left"data-aos-duration="2000"><h1>Choose your fragance</h1></div>
+     </div>
+</div>
+  </section>
+<section class="part1" style="margin-top: 50px;">
+<h3 class="title2"  data-aos="fade-up" data-aos-duration="2000"><img src="img/vh.jpg" /> Les parfums pour homme les plus vendus ce mois dernier !</h3>
+</section>
+
+<iframe src="carousel-homme.html" scrolling="no"  data-aos="fade-up" data-aos-duration="2000"></iframe>
+   <section id="bg"class="bg">
+    <h3>"Éveillez vos sens, portez l'élégance en fragrance."</h3>
+   </section>
+<section class="part1">
+    <h3 class="title2" data-aos="fade-up" data-aos-duration="2000"><img src="img/vf.png" /> Les parfums pour femme les plus vendus ce mois dernier !</h3>
+    </section>
+
+    <iframe src="carousel-femme.html" scrolling="no"  data-aos="fade-up" data-aos-duration="2000"></iframe>
+
+    <section id="bg2"class="bg2">
+        <h3>
+            "Captivante et féminine, votre essence, notre signature."</h3>
+    </section>
+
+
+    <section class="part2" id="about">
+<h3 style=" font-family: 'Great Vibes', cursive;">RB parfums</h3>
+<p>Bienvenue dans notre univers olfactif exquis, où l'art de la parfumerie rencontre l'élégance intemporelle. Notre magasin de parfums est une destination enchantée dédiée à l'exploration sensorielle et à la découverte de fragrances exquises. Chaque flacon renferme une histoire unique, capturant l'essence même de l'émotion et de la personnalité. Que vous soyez à la recherche d'une signature olfactive distinctive ou que vous souhaitiez offrir un cadeau inoubliable, notre sélection minutieuse de parfums de renom offre un éventail de notes envoûtantes et de créations artistiques. Notre équipe passionnée de conseillers olfactifs est là pour vous guider à travers ce voyage olfactif, vous aidant à trouver le parfum qui résonne le mieux avec votre individualité. Plongez dans l'opulence des arômes raffinés et laissez-vous emporter par l'expérience sensorielle unique que notre magasin a soigneusement conçue pour éveiller vos sens.</p>
+    </section>
+
+
+    <section class="part3" id="contact">
+        <h2 class="title2">Contact</h2>
+        <div class="contact">
+            <form action="">
+                <input type="text" placeholder="Nom">
+                <input type="email" placeholder="Mail">
+              <textarea name="" id="" cols="20" rows="5" placeholder="Message"></textarea>
+              <br><br><br>
+              <input type="submit" value="Envoyer" class="btn ">
+           </form>
+            <img src="img/contact.jpg" alt="" srcset="">
+        </div>
+    </section>
+    <footer align="center" style="text-align:center;width: 100%;">
+        <sub>+213673238683</sub><br>
+        <sub>contact@rbparfums.com</sub><br>
+        <sub>Tous droits réservés &copy; 2022-2023</sub><br>
+        
+        <sub>© Conçu et réalisé par Mr Achraf Rebiai - <a href="https://rebiai-achraf.github.io/portfolio">AR Développement </a> </sub>
+        <br>
+        <sub>Contactez-moi pour consulter le site complet !</sub><br><br>
+      
+      </footer>
+
+</body>
+</html>
+<script>
+    AOS.init();
+  </script>

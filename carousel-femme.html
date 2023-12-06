@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+.body{
+    background: #000!important;
+}
+    .produit{
+        position: relative;
+        height:100vh;text-align: center;
+      
+    }
+      .carousel{
+        height:100vh;
+                
+                }
+           .carousel-item img{
+            transition: .4s;
+            width: 400px;
+            scale: 1;}
+           .carousel-item:hover img{
+            scale: 1.1;    
+             transition: .4s;
+           }
+          a:hover img{
+            scale: 1.1;
+          }
+
+</style>          
+</head>
+
+<body>
+
+      <section class="produit" id="produit">
+    
+      
+           <div class="carousel" data-aos="fade-up"data-aos-duration="2000">
+          <a href="" class="carousel-item"><img src="img/pf5.png"></a>  
+           <a href="" class="carousel-item"><img src="img/pf4.png"></a>
+            <a href="" class="carousel-item"><img src="img/pf1.png" ></a>
+            <a href="" class="carousel-item"><img src="img/pf2.png"></a>
+            <a href="" class="carousel-item"><img src="img/pf3.png"></a>  
+         
+           </div>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+          
+      
+      
+         <script type="text/javascript">
+            $(document).ready(function(){
+              $('.carousel').carousel({
+                indicators:true
+              });
+            });
+          </script>
+      
+      
+      
+          </section>
+
+ </body>
+</html>
