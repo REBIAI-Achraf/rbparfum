@@ -229,7 +229,7 @@ overflow: hidden;
     color: #fff;
         transition: .4s ease-in-out;
     }
-    .hero-2{
+   .hero-2{
         margin-top:20px;
         width:30%;
         height:320px;
@@ -237,7 +237,7 @@ overflow: hidden;
         background-image: url(img/43.jpg);
         background-size:cover;
         background-position: center center;
-        animation: image 3s ease-in-out infinite;
+        background-color: #ebebeb;
     }
     
   
@@ -582,11 +582,16 @@ iframe {
 .title2 img{
     height: 50px;
 }
-.bg,.bg2{
+.bg{
     background-size: 75vh;
     background-position:center center;
     height:40vh;
 }
+  .bg2{
+    background-size: 65vh;
+    background-position:center center;
+    height:40vh;
+  }
 .bg::after,.bg2::after{
     height:40vh;
 }
@@ -674,7 +679,7 @@ iframe {
     <div class="hero-1"  data-aos="fade-right" data-aos-duration="2000">
         <h1>Choose your fragance</h1>
     </div>
-    <div class="hero-2"  data-aos="fade-up" data-aos-duration="2000">
+    <div class="hero-2" id="hero-2"data-aos="fade-up" data-aos-duration="2000">
        
     </div>
     <div class="hero-3" data-aos="fade-left"data-aos-duration="2000">
@@ -699,11 +704,54 @@ iframe {
         <p>choisir depuis une centaine de fragance originale</p>
         <a href="" class="btn"> voir plus</a>
     </div>
-    <div class="hero-9" data-aos="fade-up"data-aos-duration="2000"></div>
+    <div class="hero-9" id="hero-9" data-aos="fade-up"data-aos-duration="2000"></div>
     <div class="hero-10"  data-aos="fade-left"data-aos-duration="2000"><h1>Choose your fragance</h1></div>
      </div>
 </div>
   </section>
+  <script>
+    function setBannerImage(element, image) {
+        element.style.backgroundImage = `url(${image})`;
+    }
+
+    function animateBanner() {
+        const banner = document.getElementById('hero-2');
+
+        let currentStep = 0;
+
+        setInterval(() => {
+            if (currentStep === 0) {
+                setBannerImage(banner, 'img/42.jpg');
+            } else if (currentStep === 1) {
+                setBannerImage(banner, 'img/43.jpg');
+            } else if (currentStep === 2) {
+                setBannerImage(banner, 'img/chanel.webp');
+            }
+
+            currentStep = (currentStep + 1) % 3; // Loop between 0, 1, and 2
+        }, 1000); // Adjust the interval (in milliseconds) according to your needs
+    } animateBanner();
+    
+    function animateBanner2() {
+        const banner2 = document.getElementById('hero-9');
+
+        let currentStep = 0;
+
+        setInterval(() => {
+            if (currentStep === 0) {
+                setBannerImage(banner2, 'img/58.jpg');
+            } else if (currentStep === 1) {
+                setBannerImage(banner2, 'img/59.jpg');
+            } else if (currentStep === 2) {
+                setBannerImage(banner2, 'img/58.jpg');
+            }
+
+            currentStep = (currentStep + 1) % 3; // Loop between 0, 1, and 2
+        }, 1000); // Adjust the interval (in milliseconds) according to your needs
+    }
+
+    animateBanner2();
+</script>
 <section class="part1" style="margin-top: 50px;">
 <h3 class="title2"  data-aos="fade-up" data-aos-duration="2000"><img src="img/vh.jpg" /> Les parfums pour homme les plus vendus ce mois dernier !</h3>
 </section>
